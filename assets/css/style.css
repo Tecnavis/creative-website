@@ -3410,7 +3410,7 @@ hr {
   overflow: hidden;
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 92px) and (max-width: 1199px) {
   /* line 44, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_h1-hero.scss */
   .slider-area .hero__caption {
     padding-top: 80px;
@@ -3440,9 +3440,9 @@ hr {
 
 /* line 58, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_h1-hero.scss */
 .slider-area .hero__caption span {
-  font-size: 70px;
+  font-size: 50px;
   font-family: "Oswald", sans-serif;
-  font-weight: 700;
+  font-weight: 200;
   display: inline-block;
   position: relative;
   text-transform: uppercase;
@@ -3467,13 +3467,13 @@ hr {
 
 /* line 75, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_h1-hero.scss */
 .slider-area .hero__caption h1 {
-  font-size: 140px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 100;
   margin-bottom: 14px;
   color: #fff;
   line-height: 1.2;
   margin-bottom: 40px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -3508,7 +3508,7 @@ hr {
 
 /* line 98, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_h1-hero.scss */
 .slider-area .hero__caption p {
-  font-size: 18px;
+  font-size: 10px;
   color: #fff;
   font-family: "Roboto Condensed", sans-serif;
   margin-bottom: 50px;
