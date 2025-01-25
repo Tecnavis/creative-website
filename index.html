@@ -24,21 +24,47 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-      .header-quote {
-    font-size: 2rem; /* Font size */
-    font-weight: bold;
-    text-align: center;
-    color: #fffdfd;
-    margin-top: 50px;
-    margin-left: 500px;
-    border: 2px solid #fff; /* White border */
-    padding: 10px 50px; /* Increased horizontal padding for a wider border */
-    border-radius: 40px; /* Optional: Rounded corners */
-    display: inline-block; /* Ensures the quote stays centered and the border respects the padding */
-}
-
-
-    </style>
+        .header-quote {
+          font-size: 3rem; /* Increased font size */
+          font-weight: bold; /* Bold font */
+          text-align: center;
+          color: #fffdfd; /* White text color */
+          margin-top: 50px;
+          margin-left: 500px;
+          border: 2px solid white; /* Pure white border */
+          padding: 20px 60px; /* Increased padding for better spacing */
+          border-radius: 40px; /* Rounded corners */
+          display: inline-block; /* Keeps the quote centered */
+          /* background: linear-gradient(to right, #100f0f, #080808);  */
+          position: relative;
+          overflow: hidden;
+          transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+          line-height: 1.2; /* Adjust line height for better readability */
+        }
+      
+        .header-quote:before {
+          content: "";
+          position: absolute;
+          top: -4px;
+          left: -4px;
+          right: -4px;
+          bottom: -4px;
+          z-index: -1;
+          border: 2px solid white; /* Pure white border */
+          border-radius: 45px;
+        }
+      
+        .header-quote:hover {
+          box-shadow: 0px 10px 15px rgba(255, 255, 255, 0.4); /* Light shadow on hover */
+          transform: scale(1.05); /* Slightly enlarges on hover */
+        }
+      </style>
+      
+      <!-- <div class="header-quote">
+        Your Inspiring Quote Goes Here
+      </div>
+       -->
+      
 </head>
 <body class="black-bg">
    
