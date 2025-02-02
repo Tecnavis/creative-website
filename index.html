@@ -22,24 +22,78 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 	<style>
-		.loading-text {
-    font-size: 24px; /* Adjust the font size as needed */
-    color: white; /* White text color */
-    text-align: center; /* Center the text */
-    position: absolute; /* Position it on top */
-    top: 20px; /* Adjust the distance from the top */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Ensure exact centering */
-    padding: 10px 20px; /* Add some padding */
-    border: 2px solid white; /* White border */
-    border-radius: 50px; /* Optional rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    backdrop-filter: blur(5px); /* Apply blur effect */
+    #home-section {
+    background-image: url(images/bg1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
 }
+.loading-text {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 80px;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    position: relative; /* Needed for pseudo-element */
+}
+
+.loading-text::before {
+    content: "";
+    position: absolute;
+    inset: -2px; /* Controls border thickness */
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(to right, transparent, white);
+    -webkit-mask: linear-gradient(white, white) content-box, linear-gradient(white, white);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}
+
+
+.gradient-border {
+    position: relative;
+    display: inline-flex; /* Align text & loader inline */
+    align-items: center; /* Center align */
+    gap: 15px; /* Space between text and loader */
+    padding: 5px 100px;
+    border-radius: 50px;
+}
+
+.loader { 
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l5 1s infinite linear alternate;
+  margin-left: 20px;
+}
+
+@keyframes l5 {
+    0%  {box-shadow: 20px 0 #fff, -20px 0 #ffffff50; background: #fff }
+    33% {box-shadow: 20px 0 #fff, -20px 0 #ffffff50; background: #ffffff50}
+    66% {box-shadow: 20px 0 #ffffff50, -20px 0 #fff; background: #ffffff50}
+    100%{box-shadow: 20px 0 #ffffff50, -20px 0 #fff; background: #fff }
+}
+
+.one-third.js-fullheight.order-md-last {
+    background-image: url(images/123.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: auto; /* or cover */
+    margin-right: -200px;
+}
+
 
 	</style>
   </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="width:100%">
 	  
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
@@ -49,30 +103,37 @@
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-			<p class="loading-text">"Something creative is Loading..."</p>
-		</div>
+        <div class="collapse navbar-collapse" id="ftco-nav" style="padding: 10px 25px;">
+          <div class="loading-text gradient-border">
+              Something creative is Loading
+              <div class="loader"></div> 
+          </div>
+      </div>
+      
 		
 	    </div>
 	  </nav>
-	  <section id="home-section" class="hero" style="background-image:url(images/bg1.jpg); background-repeat: no-repeat; background-size: cover; " >
+	  <section id="home-section" class="hero" style="background-image:url(images/bg1.png); background-repeat: no-repeat; background-size:auto; " >
 
 		  <div class="home-slider  owl-carousel" >
 	      <div class="slider-item ">
 	      	<div class="overlay"></div>
 	        <div class="container">
 	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/123.png); ">
+	          	<div class="one-third js-fullheight order-md-last" >
 	          		<div class="overlay"></div>
 	          	</div>
 		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }" style="margin-left: 100px;">
 		          	<div class="text">
 		          		<span class="subheading"></span>
-			            <h1 class="mb-4 mt-3">CREATIVE</span></h1>
-			            <h2 class="mb-4">We're more than a creative agency We are your brand custodians
+			            <img src="./images/3R logo.png" style="margin-left: -25px;">
+			            <h4 class="mb-4" style="color: gray;">We're more than a creative agency We are your brand custodians
 						</h2>
-			            <p><a href="#" class="btn btn- py-3 px-4"  style="background-color: aliceblue;">Enquire Now</a> <a href="#" class="btn btn-white btn-outline-white py-3 px-4">Download Brochure</a></p>
-		            </div>
+			            <p><a href="tel:+971508064894" class="btn btn- py-3 px-4"  style="background-color: aliceblue;">Enquire Now</a> <a href="https://heyzine.com/flip-book/3e76e9cf45.html#page/1" class="btn btn-white btn-outline-white py-3 px-4">view Brochure</a></p>
+                  <p style="color: white; font-size: 16px; margin-top: 10px;">
+                    Contact Us:<br> C1 Building, 1F, Ajman Free Zone.<br>Ring Us at +971 508064894, Email us at info@creative3r.com
+                 </p>
+                </div>
 		          </div>
 	        	</div>
 	        </div>
@@ -81,19 +142,12 @@
 	     
     </section>
 
-   
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | designed and developed <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="" target="_blank">Tecnavis</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          </div>
-        </div>
-      </div>
-    </footer>
+  
     
   
 
   <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+  <!-- <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div> -->
 
 
   <script src="js/jquery.min.js"></script>
